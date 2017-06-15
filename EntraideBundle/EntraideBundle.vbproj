@@ -1,0 +1,1044 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{76FC32A2-03B7-44F1-A917-2B5FE014F2BF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>EntraideBundle.My.MyApplication</StartupObject>
+    <RootNamespace>EntraideBundle</RootNamespace>
+    <AssemblyName>Entraide</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Entraide.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Entraide.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\libs\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\Depot\Depot\bin\Debug\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\..\Depot\Depot\bin\Debug\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\..\Depot\Depot\bin\Debug\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MySqlBackup.NET 2.0.9.5\Net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Transitions">
+      <HintPath>..\Transitions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="EntraideBundle" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dashboard.Designer.vb">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Db\Database.vb" />
+    <Compile Include="Db\Entites\Module 10\BureauAlumniEntity.vb" />
+    <Compile Include="Db\Entites\Module 10\GraduationEntity.vb" />
+    <Compile Include="Db\Entites\Module 2\FournisseurEntity.vb" />
+    <Compile Include="Db\Entites\Module 7\ProgrammeEntity.vb" />
+    <Compile Include="Db\Entites\Parametrages\CategorieFournisseurEntity.vb" />
+    <Compile Include="Db\Entites\Module 2\AchatEntity.vb" />
+    <Compile Include="Db\Entites\Module 2\CategorieDonneurEntity.vb" />
+    <Compile Include="Db\Entites\Module 2\DonneurEntity2.vb" />
+    <Compile Include="Db\Entites\Module 2\MaterielEntity.vb" />
+    <Compile Include="Db\Entites\Module 2\TypeMaterielEntity.vb" />
+    <Compile Include="Db\Entites\Module 3\CodeDepenseEntity.vb" />
+    <Compile Include="Db\Entites\Module 3\CompetenceEntity.vb" />
+    <Compile Include="Db\Entites\Module 3\EtudiantEntity.vb" />
+    <Compile Include="Db\Entites\Module 3\FondSoutienEntity.vb" />
+    <Compile Include="Db\Entites\Module 3\FormationEntity.vb" />
+    <Compile Include="Db\Entites\Module 3\PaiementEntity.vb" />
+    <Compile Include="Db\Entites\Module 3\ReligionEntity.vb" />
+    <Compile Include="Db\Entites\Module 3\RevenuEntity.vb" />
+    <Compile Include="Db\Entites\Module 3\TypeFormationEntity.vb" />
+    <Compile Include="Db\Entites\Module 4\ActiviteFinancierEntity.vb" />
+    <Compile Include="Db\Entites\Module 4\DonEntity.vb" />
+    <Compile Include="Db\Entites\Module 4\DonneurEntity.vb" />
+    <Compile Include="Db\Entites\Module 4\UserEntity.vb" />
+    <Compile Include="Db\Entites\Module 5\ContratEntity.vb" />
+    <Compile Include="Db\Entites\Module 5\DepartementEntity.vb" />
+    <Compile Include="Db\Entites\Module 5\EmployeEntity.vb" />
+    <Compile Include="Db\Entites\Module 5\PosteEntity.vb" />
+    <Compile Include="Db\Entites\Module 5\SalaireEntity.vb" />
+    <Compile Include="Db\Entites\Module 6\ClassEntity.vb" />
+    <Compile Include="Db\Entites\Module 6\DeviseEntity.vb" />
+    <Compile Include="Db\Entites\Module 6\EmployesEntity.vb" />
+    <Compile Include="Db\Entites\Module 6\RevenuEntity.vb" />
+    <Compile Include="Db\Entites\Module 6\TousChamps.vb" />
+    <Compile Include="Db\Entites\Module 6\TypeEntity.vb" />
+    <Compile Include="Db\Entites\Module 7\CodeDepenseEntity.vb" />
+    <Compile Include="Db\Entites\Module 7\DepenseEntity.vb" />
+    <Compile Include="Db\Entites\Module 7\TypeDepenseEntity.vb" />
+    <Compile Include="Db\Entites\Parametrages\TypeAgrEntity.vb" />
+    <Compile Include="Db\Tables\BaseTable.vb" />
+    <Compile Include="Db\Tables\Module 10\BureauTable.vb" />
+    <Compile Include="Db\Tables\Module 10\GraduationsTable.vb" />
+    <Compile Include="Db\Tables\Module 2\AchatsTable.vb" />
+    <Compile Include="Db\Entites\Module 2\FournisseurEntity2.vb" />
+    <Compile Include="Db\Tables\Module 2\MaterielsTable.vb" />
+    <Compile Include="Db\Tables\Module 2\DonneursTable.vb" />
+    <Compile Include="Db\Tables\Module 2\FournisseursTable.vb" />
+    <Compile Include="Db\Tables\Module 3\EtudiantsTable.vb" />
+    <Compile Include="Db\Tables\Module 3\TableTypeFormation.vb" />
+    <Compile Include="Db\Tables\Module 4\DonsTable.vb" />
+    <Compile Include="Db\Tables\Module 5\DepartementsTable.vb" />
+    <Compile Include="Db\Tables\Module 5\EmployesTable.vb" />
+    <Compile Include="Db\Tables\Module 6\ClassTable.vb" />
+    <Compile Include="Db\Tables\Module 7\DepensesTable.vb" />
+    <Compile Include="Db\Tables\Module 9\TableDepense.vb" />
+    <Compile Include="Db\Tables\Parametrages\CategorieDonneursTable.vb" />
+    <Compile Include="Db\Tables\Parametrages\CategorieFournisseursTable.vb" />
+    <Compile Include="Db\Tables\Parametrages\CodeDepensesTable.vb" />
+    <Compile Include="Db\Tables\Parametrages\PostesTable.vb" />
+    <Compile Include="Db\Tables\Parametrages\ProgrammesTable.vb" />
+    <Compile Include="Db\Tables\Parametrages\TypeAgrsTable.vb" />
+    <Compile Include="Db\Tables\Parametrages\TypeFormationsTable.vb" />
+    <Compile Include="Db\Tables\UsersTable.vb" />
+    <Compile Include="ListeEtudiantsDette.designer.vb">
+      <DependentUpon>ListeEtudiantsDette.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListeEtudiantsDette.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 10\AddBureau.designer.vb">
+      <DependentUpon>AddBureau.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 10\AddBureau.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 10\AddGraduation.designer.vb">
+      <DependentUpon>AddGraduation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 10\AddGraduation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 10\ListeAlumni.designer.vb">
+      <DependentUpon>ListeAlumni.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 10\ListeAlumni.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 10\RapportGraduation.designer.vb">
+      <DependentUpon>RapportGraduation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 10\RapportGraduation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 1\RapportOrganisation.Designer.vb">
+      <DependentUpon>RapportOrganisation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 1\RapportOrganisation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 2\AddDonneur.designer.vb">
+      <DependentUpon>AddDonneur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 2\AddDonneur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 2\AddFournisseur.designer.vb">
+      <DependentUpon>AddFournisseur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 2\AddFournisseur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 2\ListeMateriel.Designer.vb">
+      <DependentUpon>ListeMateriel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 2\ListeMateriel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 2\MajMateriel.Designer.vb">
+      <DependentUpon>MajMateriel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 2\MajMateriel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 2\Materiel.Designer.vb">
+      <DependentUpon>Materiel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 2\Materiel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 2\NouveauDocument.Designer.vb">
+      <DependentUpon>NouveauDocument.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 2\NouveauDocument.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 2\RapportDonneur.designer.vb">
+      <DependentUpon>RapportDonneur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 2\RapportDonneur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 2\RapportFournisseur.designer.vb">
+      <DependentUpon>RapportFournisseur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 2\RapportFournisseur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 2\UpdateDonneur.designer.vb">
+      <DependentUpon>UpdateDonneur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 2\UpdateDonneur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 2\UpdateFournisseur.designer.vb">
+      <DependentUpon>UpdateFournisseur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 2\UpdateFournisseur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 9\AddPaiementFond.designer.vb">
+      <DependentUpon>AddPaiementFond.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 9\AddPaiementFond.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 3\Inscription.designer.vb">
+      <DependentUpon>Inscription.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 3\Inscription.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 3\RapportEtudiant.designer.vb">
+      <DependentUpon>RapportEtudiant.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 3\RapportEtudiant.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 3\UpdateEtudiant.designer.vb">
+      <DependentUpon>UpdateEtudiant.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 3\UpdateEtudiant.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 3\UpdatePaiement.designer.vb">
+      <DependentUpon>UpdatePaiement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 3\UpdatePaiement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 4\MajDon.designer.vb">
+      <DependentUpon>MajDon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 4\MajDon.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 6\MajRevenu.designer.vb">
+      <DependentUpon>MajRevenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 6\MajRevenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Db\Tables\Module 6\TableDevise.vb" />
+    <Compile Include="Db\Tables\Module 6\TableRevenu.vb" />
+    <Compile Include="Db\Tables\Module 6\TableType.vb" />
+    <Compile Include="Module 4\ListeDons.designer.vb">
+      <DependentUpon>ListeDons.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 4\ListeDons.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.vb">
+      <DependentUpon>Main.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 4\Don.designer.vb">
+      <DependentUpon>Don.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 4\Don.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 6\ListeRevenu.designer.vb">
+      <DependentUpon>ListeRevenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 6\ListeRevenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 6\Revenu.designer.vb">
+      <DependentUpon>Revenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 6\Revenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 5\Employee.designer.vb">
+      <DependentUpon>Employee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 5\Employee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 5\ListeEmployees.designer.vb">
+      <DependentUpon>ListeEmployees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 5\ListeEmployees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 5\MajEmploye.Designer.vb">
+      <DependentUpon>MajEmploye.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 5\MajEmploye.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 7\Depenses.designer.vb">
+      <DependentUpon>Depenses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 7\Depenses.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 7\ListeDepenses.designer.vb">
+      <DependentUpon>ListeDepenses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 7\ListeDepenses.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 7\MajDepenses.designer.vb">
+      <DependentUpon>MajDepenses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 7\MajDepenses.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 9\DemandeSoutien.designer.vb">
+      <DependentUpon>DemandeSoutien.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 9\DemandeSoutien.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 9\ListeEtudiants.designer.vb">
+      <DependentUpon>ListeEtudiants.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 9\ListeEtudiants.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 9\RapportFond.designer.vb">
+      <DependentUpon>RapportFond.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 9\RapportFond.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module 9\UpdateFond.designer.vb">
+      <DependentUpon>UpdateFond.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module 9\UpdateFond.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Parametrage\CodeRevenu.Designer.vb">
+      <DependentUpon>CodeRevenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrage\CodeRevenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrage\Generation.Designer.vb">
+      <DependentUpon>Generation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrage\Generation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrage\ListeCodeRevenu.Designer.vb">
+      <DependentUpon>ListeCodeRevenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrage\ListeCodeRevenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrage\ListeGeneration.Designer.vb">
+      <DependentUpon>ListeGeneration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrage\ListeGeneration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrage\ListeProgrammes.Designer.vb">
+      <DependentUpon>ListeProgrammes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrage\ListeProgrammes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrage\ListeTypeRevenu.Designer.vb">
+      <DependentUpon>ListeTypeRevenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrage\ListeTypeRevenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrage\ListeUsers.designer.vb">
+      <DependentUpon>ListeUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrage\ListeUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrage\Poste.designer.vb">
+      <DependentUpon>Poste.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrage\Poste.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrage\Departement.designer.vb">
+      <DependentUpon>Departement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrage\Departement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrage\Programmes.Designer.vb">
+      <DependentUpon>Programmes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrage\Programmes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrage\TypeFormation.designer.vb">
+      <DependentUpon>TypeFormation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrage\TypeFormation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrage\CodeDepense.designer.vb">
+      <DependentUpon>CodeDepense.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrage\CodeDepense.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrage\CategorieFournisseur.designer.vb">
+      <DependentUpon>CategorieFournisseur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrage\CategorieFournisseur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrage\CategorieDonneur.designer.vb">
+      <DependentUpon>CategorieDonneur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrage\CategorieDonneur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrage\ListeCategorieDonneurs.designer.vb">
+      <DependentUpon>ListeCategorieDonneurs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrage\ListeCategorieDonneurs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrage\ListeCategorieFournisseur.designer.vb">
+      <DependentUpon>ListeCategorieFournisseur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrage\ListeCategorieFournisseur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrage\ListeCodeDepense.designer.vb">
+      <DependentUpon>ListeCodeDepense.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrage\ListeCodeDepense.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrage\ListeTypeFormations.designer.vb">
+      <DependentUpon>ListeTypeFormations.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrage\ListeTypeFormations.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrage\ListeDepartement.designer.vb">
+      <DependentUpon>ListeDepartement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrage\ListeDepartement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrage\ListePoste.designer.vb">
+      <DependentUpon>ListePoste.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrage\ListePoste.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrage\TypeRevenu.Designer.vb">
+      <DependentUpon>TypeRevenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrage\TypeRevenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrage\Users.designer.vb">
+      <DependentUpon>Users.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrage\Users.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\DataSetTables.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTables.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\DataSetTables.vb">
+      <DependentUpon>DataSetTables.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\RecuCaisse.Designer.vb">
+      <DependentUpon>RecuCaisse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\RecuCaisse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\RecuFond.Designer.vb">
+      <DependentUpon>RecuFond.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\RecuFond.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\ReportAllRevenu.Designer.vb">
+      <DependentUpon>ReportAllRevenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ReportAllRevenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\ReportDepenses.Designer.vb">
+      <DependentUpon>ReportDepenses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ReportDepenses.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\ReportDonneur.Designer.vb">
+      <DependentUpon>ReportDonneur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ReportDonneur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\ReportDons.Designer.vb">
+      <DependentUpon>ReportDons.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ReportDons.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\ReportEmployes.Designer.vb">
+      <DependentUpon>ReportEmployes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ReportEmployes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\ReportEtudiants.Designer.vb">
+      <DependentUpon>ReportEtudiants.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ReportEtudiants.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\ReportFond.Designer.vb">
+      <DependentUpon>ReportFond.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ReportFond.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\ReportFournisseurs.Designer.vb">
+      <DependentUpon>ReportFournisseurs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ReportFournisseurs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\ReportGraduation.Designer.vb">
+      <DependentUpon>ReportGraduation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ReportGraduation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\ReportMateriels.Designer.vb">
+      <DependentUpon>ReportMateriels.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ReportMateriels.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\ReportRevenu.Designer.vb">
+      <DependentUpon>ReportRevenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ReportRevenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RevenuGeneral.Designer.vb">
+      <DependentUpon>RevenuGeneral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RevenuGeneral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.vb">
+      <DependentUpon>Test.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Test.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CircularProgress.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\GlowPanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\MessagesControl.Designer.vb">
+      <DependentUpon>MessagesControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MessagesControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\RichText.Designer.vb">
+      <DependentUpon>RichText.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RichText.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\RoundedButton.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\ShadowPanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Util.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dashboard.es.resx">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.fr.resx">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeEtudiantsDette.resx">
+      <DependentUpon>ListeEtudiantsDette.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 10\AddBureau.resx">
+      <DependentUpon>AddBureau.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 10\AddGraduation.resx">
+      <DependentUpon>AddGraduation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 10\ListeAlumni.resx">
+      <DependentUpon>ListeAlumni.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 10\RapportGraduation.resx">
+      <DependentUpon>RapportGraduation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 1\RapportOrganisation.resx">
+      <DependentUpon>RapportOrganisation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 2\AddDonneur.resx">
+      <DependentUpon>AddDonneur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 2\AddFournisseur.resx">
+      <DependentUpon>AddFournisseur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 2\ListeMateriel.resx">
+      <DependentUpon>ListeMateriel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 2\MajMateriel.resx">
+      <DependentUpon>MajMateriel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 2\Materiel.resx">
+      <DependentUpon>Materiel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 2\NouveauDocument.resx">
+      <DependentUpon>NouveauDocument.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 2\RapportDonneur.resx">
+      <DependentUpon>RapportDonneur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 2\RapportFournisseur.resx">
+      <DependentUpon>RapportFournisseur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 2\UpdateDonneur.resx">
+      <DependentUpon>UpdateDonneur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 2\UpdateFournisseur.resx">
+      <DependentUpon>UpdateFournisseur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 9\AddPaiementFond.resx">
+      <DependentUpon>AddPaiementFond.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 3\Inscription.resx">
+      <DependentUpon>Inscription.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 3\RapportEtudiant.resx">
+      <DependentUpon>RapportEtudiant.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 3\UpdateEtudiant.resx">
+      <DependentUpon>UpdateEtudiant.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 3\UpdatePaiement.resx">
+      <DependentUpon>UpdatePaiement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 4\MajDon.resx">
+      <DependentUpon>MajDon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 6\MajRevenu.resx">
+      <DependentUpon>MajRevenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 4\ListeDons.resx">
+      <DependentUpon>ListeDons.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 4\Don.resx">
+      <DependentUpon>Don.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 6\ListeRevenu.resx">
+      <DependentUpon>ListeRevenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 6\Revenu.resx">
+      <DependentUpon>Revenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 5\Employee.resx">
+      <DependentUpon>Employee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 5\ListeEmployees.resx">
+      <DependentUpon>ListeEmployees.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 5\MajEmploye.resx">
+      <DependentUpon>MajEmploye.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 7\Depenses.resx">
+      <DependentUpon>Depenses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 7\ListeDepenses.resx">
+      <DependentUpon>ListeDepenses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 7\MajDepenses.resx">
+      <DependentUpon>MajDepenses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 9\DemandeSoutien.resx">
+      <DependentUpon>DemandeSoutien.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 9\ListeEtudiants.resx">
+      <DependentUpon>ListeEtudiants.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 9\RapportFond.resx">
+      <DependentUpon>RapportFond.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module 9\UpdateFond.resx">
+      <DependentUpon>UpdateFond.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrage\CodeRevenu.resx">
+      <DependentUpon>CodeRevenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrage\Generation.resx">
+      <DependentUpon>Generation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrage\ListeCodeRevenu.resx">
+      <DependentUpon>ListeCodeRevenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrage\ListeGeneration.resx">
+      <DependentUpon>ListeGeneration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrage\ListeProgrammes.resx">
+      <DependentUpon>ListeProgrammes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrage\ListeTypeRevenu.resx">
+      <DependentUpon>ListeTypeRevenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrage\ListeUsers.resx">
+      <DependentUpon>ListeUsers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrage\Poste.resx">
+      <DependentUpon>Poste.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrage\Departement.resx">
+      <DependentUpon>Departement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrage\Programmes.resx">
+      <DependentUpon>Programmes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrage\TypeFormation.resx">
+      <DependentUpon>TypeFormation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrage\CodeDepense.resx">
+      <DependentUpon>CodeDepense.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrage\CategorieFournisseur.resx">
+      <DependentUpon>CategorieFournisseur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrage\CategorieDonneur.resx">
+      <DependentUpon>CategorieDonneur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrage\ListeCategorieDonneurs.resx">
+      <DependentUpon>ListeCategorieDonneurs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrage\ListeCategorieFournisseur.resx">
+      <DependentUpon>ListeCategorieFournisseur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrage\ListeCodeDepense.resx">
+      <DependentUpon>ListeCodeDepense.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrage\ListeTypeFormations.resx">
+      <DependentUpon>ListeTypeFormations.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrage\ListeDepartement.resx">
+      <DependentUpon>ListeDepartement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrage\ListePoste.resx">
+      <DependentUpon>ListePoste.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrage\TypeRevenu.resx">
+      <DependentUpon>TypeRevenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrage\Users.resx">
+      <DependentUpon>Users.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\rdl\RecuCaisse.rdlc" />
+    <EmbeddedResource Include="Printing\rdl\RecuFond.rdlc" />
+    <EmbeddedResource Include="Printing\rdl\ReportAllRevenu.rdlc" />
+    <EmbeddedResource Include="Printing\rdl\ReportDepenses.rdlc" />
+    <EmbeddedResource Include="Printing\rdl\ReportDons.rdlc" />
+    <EmbeddedResource Include="Printing\rdl\ReportEmployes.rdlc" />
+    <EmbeddedResource Include="Printing\rdl\ReportDonneurs.rdlc" />
+    <EmbeddedResource Include="Printing\rdl\ReportEtudiants.rdlc" />
+    <EmbeddedResource Include="Printing\rdl\ReportFond.rdlc" />
+    <EmbeddedResource Include="Printing\rdl\ReportFournisseurs.rdlc" />
+    <EmbeddedResource Include="Printing\rdl\ReportGraduation.rdlc" />
+    <EmbeddedResource Include="Printing\rdl\ReportRevenu.rdlc" />
+    <EmbeddedResource Include="Printing\RecuCaisse.resx">
+      <DependentUpon>RecuCaisse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\RecuFond.resx">
+      <DependentUpon>RecuFond.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ReportAllRevenu.resx">
+      <DependentUpon>ReportAllRevenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ReportDepenses.resx">
+      <DependentUpon>ReportDepenses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ReportDonneur.resx">
+      <DependentUpon>ReportDonneur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ReportDons.resx">
+      <DependentUpon>ReportDons.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ReportEmployes.resx">
+      <DependentUpon>ReportEmployes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ReportEtudiants.resx">
+      <DependentUpon>ReportEtudiants.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ReportFond.resx">
+      <DependentUpon>ReportFond.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ReportFournisseurs.resx">
+      <DependentUpon>ReportFournisseurs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ReportGraduation.resx">
+      <DependentUpon>ReportGraduation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ReportMateriels.resx">
+      <DependentUpon>ReportMateriels.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ReportRevenu.resx">
+      <DependentUpon>ReportRevenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RevenuGeneral.resx">
+      <DependentUpon>RevenuGeneral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MessagesControl.resx">
+      <DependentUpon>MessagesControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RichText.resx">
+      <DependentUpon>RichText.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Graph1.dgml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConfigManager\ConfigManager.vbproj">
+      <Project>{8f88e478-0180-4729-9ff0-c7e7de33ed8b}</Project>
+      <Name>ConfigManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntraideOrm\EntraideOrm.vbproj">
+      <Project>{bc0bc33a-6805-41ac-80ff-fdb74be0414c}</Project>
+      <Name>EntraideOrm</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Printing\DataSetTables.xsc">
+      <DependentUpon>DataSetTables.xsd</DependentUpon>
+    </None>
+    <None Include="Printing\DataSetTables.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTables.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Printing\DataSetTables.xss">
+      <DependentUpon>DataSetTables.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\Knob Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+    <None Include="Resources\ic_account_circle_black_48dp.png" />
+    <None Include="Resources\ic_account_circle_grey600_24dp.png" />
+    <None Include="Resources\ic_build_grey600_24dp.png" />
+    <None Include="Resources\ic_https_grey600_24dp.png" />
+    <None Include="Resources\ic_mail_grey600_24dp.png" />
+    <None Include="Resources\ic_mail_grey600_36dp.png" />
+    <None Include="Resources\ic_notifications_black_36dp.png" />
+    <None Include="Resources\ic_domain_black_36dp.png" />
+    <None Include="Resources\ic_group_black_36dp.png" />
+    <None Include="Resources\ic_vpn_lock_grey600_48dp.png" />
+    <None Include="Resources\ic_event_note_grey600_36dp.png" />
+    <None Include="Resources\ic_event_note_grey600_48dp.png" />
+    <None Include="Resources\ic_menu_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

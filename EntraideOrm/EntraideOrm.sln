@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EntraideOrm", "EntraideOrm.vbproj", "{F10AFC6B-C066-4AE3-8EE2-23AA21B041BC}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConfigManager", "..\ConfigManager\ConfigManager.vbproj", "{8F88E478-0180-4729-9FF0-C7E7DE33ED8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F10AFC6B-C066-4AE3-8EE2-23AA21B041BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F10AFC6B-C066-4AE3-8EE2-23AA21B041BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F10AFC6B-C066-4AE3-8EE2-23AA21B041BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F10AFC6B-C066-4AE3-8EE2-23AA21B041BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F88E478-0180-4729-9FF0-C7E7DE33ED8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F88E478-0180-4729-9FF0-C7E7DE33ED8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F88E478-0180-4729-9FF0-C7E7DE33ED8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F88E478-0180-4729-9FF0-C7E7DE33ED8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC0BC33A-6805-41AC-80FF-FDB74BE0414C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>EntraideOrm</RootNamespace>
+    <FileAlignment>512</FileAlignment>
+    <AssemblyName>EntraideOrm</AssemblyName>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSchema.lds" />
+    <None Include="Luna.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DbScript.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LunaEngine\ClassBase\LunaBaseClasses.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Achats.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_AchatsDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Activite_financiers.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Activite_financiersDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Categorie_donneurs.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Categorie_donneursDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Classification_revenus.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Classification_revenusDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Code_depenses.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Code_depensesDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Competances.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_CompetancesDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Contrats.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_ContratsDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Departements.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_DepartementsDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Depenses.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_DepensesDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Devises.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_DevisesDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Donneurs.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_DonneursDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Dons.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_DonsDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Employes.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_EmployesDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Fournisseurs.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_FournisseursDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Materiels.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_MaterielsDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Organisations.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_OrganisationsDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Postes.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_PostesDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Programmes.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_ProgrammesDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Revenus.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_RevenusDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Salaires.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_SalairesDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Type_agrs.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Type_agrsDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Type_competance.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Type_competanceDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Type_depenses.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Type_depensesDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Type_dons.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Type_donsDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Type_formations.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Type_formationsDAO.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Type_materiels.vb" />
+    <Compile Include="LunaEngine\ClassDAO\_Type_materielsDAO.vb" />
+    <Compile Include="LunaUserClass\ClassBase\LunaContext.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\AchatsDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\Activite_financiersDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\Categorie_donneursDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\Classification_revenusDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\Code_depensesDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\CompetancesDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\ContratsDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\DepartementsDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\DepensesDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\DevisesDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\DonneursDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\DonsDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\EmployesDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\FournisseursDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\MaterielsDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\OrganisationsDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\PostesDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\ProgrammesDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\RevenusDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\SalairesDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\Type_agrsDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\Type_competanceDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\Type_depensesDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\Type_donsDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\Type_formationsDAO.vb" />
+    <Compile Include="LunaUserClass\ClassDAO\Type_materielsDAO.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Achats.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Activite_financiers.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Categorie_donneurs.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Classification_revenus.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Code_depenses.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Competances.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Contrats.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Departements.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Depenses.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Devises.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Donneurs.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Dons.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Employes.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Fournisseurs.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Materiels.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Organisations.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Postes.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Programmes.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Revenus.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Salaires.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Type_agrs.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Type_competance.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Type_depenses.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Type_dons.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Type_formations.vb" />
+    <Compile Include="LunaUserClass\ClassEntity\Type_materiels.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConfigManager\ConfigManager.vbproj">
+      <Project>{8f88e478-0180-4729-9ff0-c7e7de33ed8b}</Project>
+      <Name>ConfigManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

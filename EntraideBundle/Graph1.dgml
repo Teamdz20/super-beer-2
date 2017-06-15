@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" Layout="Sugiyama" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="CLIENT" Bounds="245.764583333333,161.215,57.6066666666666,25.96" UseManualLocation="True" />
+    <Node Id="DEMIGROS" Bounds="69.6266666666668,165,82.5699999999999,25.96" Label="DEMI GROS" UseManualLocation="True" />
+    <Node Id="DETAIL" Bounds="72.2350000000001,8,57.3533333333334,25.96" UseManualLocation="True" />
+    <Node Id="ENTREPOT" Bounds="-191,-7,76.6333333333333,25.96" UseManualLocation="True" />
+    <Node Id="FOURNISSEURS" Bounds="-260.901666666667,129.98,103.106666666667,25.96" UseManualLocation="True" />
+    <Node Id="GROS" Bounds="-64.2849999999999,87,50.83,25.96" UseManualLocation="True" />
+    <Node Id="SURGELER" Bounds="80.6333333333334,-130,74.9933333333333,25.96" UseManualLocation="True" />
+    <Node Id="VENTE" Bounds="243.6475,9.47,54.8566666666667,25.96" UseManualLocation="True" />
+  </Nodes>
+  <Links>
+    <Link Source="CLIENT" Target="VENTE" Bounds="271.581605390233,44.4276147187589,2.68761900810512,116.787384976065" />
+    <Link Source="DEMIGROS" Target="VENTE" Bounds="124.278404199634,41.699863828626,126.973995314216,123.300139528308" />
+    <Link Source="DETAIL" Target="VENTE" Bounds="129.588341166178,21.2277292252438,105.059494638672,0.907579517741389" />
+    <Link Source="ENTREPOT" Target="GROS" Bounds="-136.967408005656,18.9599997806549,75.4422358485563,62.3087815393193" />
+    <Link Source="ENTREPOT" Target="SURGELER" Bounds="-124.104820241111,-100.318206003987,205.461915307185,93.3182057846418" />
+    <Link Source="FOURNISSEURS" Target="ENTREPOT" Bounds="-203.978853044944,27.2765026066164,42.4857195189277,102.703504107251" />
+    <Link Source="GROS" Target="DEMIGROS" Bounds="-14.8448501646356,112.491287938948,92.848838483617,48.3517753343437" />
+    <Link Source="GROS" Target="DETAIL" Bounds="-15.9724564813387,38.3882167096461,86.082230225539,48.6508450109836" />
+    <Link Source="SURGELER" Target="VENTE" Bounds="132.364161416935,-104.040000457764,117.827340382568,107.445755162628" />
+  </Links>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="Label" Label="Étiquette" Description="Étiquette affichable d'un objet pouvant être annoté" DataType="System.String" />
+    <Property Id="Layout" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Catégorie 2" ValueLabel="A la catégorie">
+      <Condition Expression="HasCategory('Category2')" />
+      <Setter Property="Background" Value="#FF7DC633" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Catégorie 3" ValueLabel="A la catégorie">
+      <Condition Expression="HasCategory('Category3')" />
+      <Setter Property="Background" Value="#FF7FC9FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Commentaire" ValueLabel="Possède un commentaire">
+      <Condition Expression="HasCategory('Comment')" />
+      <Setter Property="Background" Value="#FFFFFACD" />
+      <Setter Property="Stroke" Value="#FFE5C365" />
+      <Setter Property="StrokeThickness" Value="1" />
+      <Setter Property="NodeRadius" Value="2" />
+      <Setter Property="MaxWidth" Value="250" />
+    </Style>
+  </Styles>
+</DirectedGraph>
